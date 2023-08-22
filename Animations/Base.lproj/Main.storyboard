@@ -16,24 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFs-zT-8pz">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DFs-zT-8pz">
                                 <rect key="frame" x="96.666666666666686" y="338.66666666666669" width="200" height="200.00000000000006"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="5gk-Ks-Rt1"/>
-                                    <constraint firstAttribute="height" constant="200" id="zEM-Zn-ca9"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="DFs-zT-8pz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="oIE-aA-iwJ"/>
-                            <constraint firstItem="DFs-zT-8pz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pBG-jl-Tw3"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="CenterYContraint" destination="oIE-aA-iwJ" id="nAb-5Z-mlF"/>
+                        <outlet property="myView" destination="DFs-zT-8pz" id="6yw-zD-N1k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

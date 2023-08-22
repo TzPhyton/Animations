@@ -8,40 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-  /*  let myView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemGreen
-        return view
-    }()
     
-    var centerYConstraint: NSLayoutConstraint?*/
+    @IBOutlet weak var myView: UIView!
     
-    @IBOutlet weak var CenterYContraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*view.addSubview(myView)
-        centerYConstraint = myView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        myView.frame = CGRect (x: 0, y: 0, width: 0, height: 0)
+        myView.alpha = 0.0
+        myView.center = view.center
         
-        NSLayoutConstraint.activate([
-            myView.heightAnchor.constraint(equalToConstant: 200),
-            myView.widthAnchor.constraint(equalToConstant: 200),
-            centerYConstraint!,
-            myView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])*/
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-            self.animateConstraint()
+        UIView.animate(withDuration:2) {
+            self.myView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+            self.myView.center = self.view.center
+            self.myView.alpha = 1.0
+            self.myView.layer.cornerRadius = 50
         }
-    }
-    func animateConstraint() {
-        UIView.animate(withDuration: 2) {
-            self.CenterYContraint?.constant = -200
-            self.view.layoutIfNeeded()
-        }
-    }
         
-}
+    }
     
-
+}
